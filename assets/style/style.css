@@ -127,9 +127,8 @@ button {
   position: absolute;
   top: -120px;
   right: 0;
-  /* background: url("/assets/img/bg.png"); */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)),
-    url("/assets/img/bg.png");
+    url("./assets/img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
