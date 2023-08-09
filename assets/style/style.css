@@ -48,6 +48,12 @@ button {
 }
 
 /* Header */
+.menu,
+.more,
+.close {
+  display: none;
+}
+
 .header {
   display: flex;
 }
@@ -59,20 +65,20 @@ button {
   margin: 40px 0;
 }
 
-.headerInner ul {
+.headerInner .nav {
   display: flex;
   column-gap: 50px;
   align-items: center;
 }
 
-.headerInner ul li a {
+.headerInner .nav li a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
 }
 
-.headerInner ul li a:after {
+.headerInner .nav li a:after {
   display: block;
   content: "";
   border-bottom: 2px solid #ffca30;
@@ -83,7 +89,7 @@ button {
   padding-bottom: 5px;
 }
 
-.headerInner ul li a:hover:after {
+.headerInner .nav li a:hover:after {
   transform: scaleX(1);
 }
 
@@ -151,6 +157,7 @@ button {
   font-weight: 600;
   letter-spacing: 1.6px;
   font-family: "Steppe";
+  max-width: 1000px;
 }
 
 .introInner .introTitle .ai {
@@ -174,7 +181,7 @@ button {
 
 .introButton {
   width: 228px;
-  height: 70px;
+  height: 55px;
   background: #ffca30;
   border-radius: 8px;
   border: none;
@@ -372,8 +379,13 @@ button {
 
   background: #030303;
   padding: 25px;
+  border-radius: 8px;
 
   margin-top: 30px;
+}
+
+.cardsInner .card .img img {
+  border-radius: 8px;
 }
 
 .info .name {
@@ -407,17 +419,17 @@ button {
 
 .info button {
   width: 365px;
-  height: 52px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
   outline: none;
   background: #ffb930;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   color: #000;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   transition: all 0.5s ease;
   cursor: pointer;
@@ -450,4 +462,279 @@ footer {
   justify-content: space-between;
 
   margin: 37px 0;
+}
+
+/* Media */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+
+  .intro::before {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 1)
+      ),
+      url("../img/background.png");
+    height: 1130px;
+    top: -290px;
+  }
+
+  .faq {
+    margin-top: 375px;
+  }
+
+  .introInner .introTitle {
+    font-size: 60px;
+    max-width: 750px;
+  }
+
+  .memberInner .block {
+    column-gap: 50px;
+  }
+
+  .faqInner {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 767px;
+  }
+
+  .headerInner .nav {
+    column-gap: 10px;
+  }
+
+  .headerInner .contacts hr {
+    margin: 0 10px;
+  }
+
+  .headerInner .logo img,
+  .footerInner .logo img {
+    width: 150px;
+  }
+
+  .memberInner {
+    margin: 50px 0 120px;
+  }
+
+  .memberInner .block {
+    margin-top: 30px;
+  }
+
+  .block .first,
+  .block .second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .block img {
+    width: 300px;
+  }
+
+  .cardsInner .card {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .cardsInner .card .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .cardsInner .card .img img {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: none;
+  }
+
+  .introInner {
+    margin-top: 60px;
+  }
+
+  .introInner .introTitle {
+    font-size: 50px;
+    max-width: 600px;
+  }
+
+  .introInner .introDesc {
+    max-width: 800px;
+  }
+
+  .headerInner .nav,
+  .headerInner .contacts {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .more {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    z-index: 3;
+  }
+
+  .menuBlock {
+    display: none;
+
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: #ffca30;
+    width: 300px;
+    height: 100%;
+    z-index: 2;
+
+    padding: 150px 0;
+  }
+
+  .menuBlock li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .overflow {
+    overflow: hidden;
+  }
+
+  .block .first img,
+  .block .second img {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .memberInner .block .first .name,
+  .memberInner .block .second .name {
+    font-size: 22px;
+  }
+
+  .memberInner .block .first .job,
+  .memberInner .block .second .job {
+    font-size: 26px;
+  }
+
+  .faqInner p {
+    font-size: 22px;
+  }
+
+  .info .name {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .info .name {
+    font-size: 22px;
+  }
+
+  .info button {
+    width: 300px;
+    font-size: 16px;
+  }
+
+  .memberInner .block .first .name,
+  .memberInner .block .second .name {
+    font-size: 18px;
+  }
+
+  .info .block .price,
+  .info .block .add {
+    font-size: 18px;
+  }
+
+  .memberInner .block .first .job,
+  .memberInner .block .second .job {
+    font-size: 16px;
+  }
+
+  .memberInner .block .first img,
+  .memberInner .block .second img {
+    width: 60vw;
+  }
+
+  .memberInner .block {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .memberInner .block .first {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .info .name {
+    font-size: 18px;
+  }
+
+  .info button {
+    width: 295px;
+    font-size: 14px;
+  }
+
+  .footerInner {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .faqInner h1 {
+    font-size: 22px;
+  }
+
+  .introInner .introTitle {
+    font-size: 40px;
+  }
+
+  .introInner .introDesc {
+    margin-top: 30px;
+  }
+
+  .intro::before {
+    top: -298px;
+  }
+
+  .faq {
+    margin-top: 280px;
+  }
+
+  .cardsInner .title {
+    font-size: 22px;
+  }
+
+  .memberInner h1 {
+    font-size: 22px;
+  }
+
+  .faqInner p {
+    font-size: 20px;
+  }
 }
