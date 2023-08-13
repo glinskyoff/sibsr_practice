@@ -7,7 +7,7 @@ $(document).ready(function () {
         {
           scrollTop: $(hash).offset().top - 50,
         },
-        800,
+        1500,
         function () {}
       );
     }
@@ -22,11 +22,3 @@ $(document).ready(function () {
     $("body").removeClass("overflow");
   });
 });
-
-// $(".more").toggle("slow", function () {
-//   $(".menuBlock").css("display", "block");
-// });
-
-// $(".menu__item").on("click", function () {
-//   $(".menu__box").css("left", "-100%");
-// });
