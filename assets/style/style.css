@@ -583,6 +583,11 @@ footer {
   .faqInner {
     margin-bottom: 100px;
   }
+
+  .liveImg img {
+    max-width: 100%;
+    width: 1180px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -715,6 +720,24 @@ footer {
   .block .second img {
     width: 30vw;
   }
+
+  .onlineTitle {
+    font-size: 26px;
+  }
+
+  .onlineTitle span {
+    font-size: 54px;
+  }
+
+  .onlineDesc {
+    font-size: 22px;
+    margin-top: 50px;
+  }
+
+  .onlineButton {
+    width: 334px;
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -775,6 +798,28 @@ footer {
   .memberInner .block .first {
     margin-top: 50px;
   }
+
+  .onlineTitle {
+    font-size: 22px;
+  }
+
+  .onlineTitle span {
+    font-size: 45px;
+  }
+
+  .onlineDesc {
+    font-size: 16px;
+  }
+
+  .onlineButton {
+    width: 278px;
+    font-size: 14px;
+  }
+
+  .arrowImg,
+  .liveImg {
+    margin-top: 40px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -822,5 +867,13 @@ footer {
 
   .faqInner p {
     font-size: 20px;
+  }
+
+  .onlineTitle {
+    font-size: 20px;
+  }
+
+  .onlineTitle span {
+    font-size: 41px;
   }
 }
