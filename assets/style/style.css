@@ -224,7 +224,6 @@ button {
   color: #fff;
   font-size: 26px;
   font-weight: 700;
-  text-transform: uppercase;
   position: relative;
 }
 
@@ -276,7 +275,6 @@ button {
   color: #ffca30;
   font-size: 26px;
   font-weight: 700;
-  text-transform: uppercase;
   position: relative;
 }
 
@@ -317,17 +315,17 @@ button {
 
 .memberInner .block .first img,
 .memberInner .block .second img {
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .memberInner .block .first img:hover,
 .memberInner .block .second img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .memberInner .block .first .job,
 .memberInner .block .second .job {
-  color: #fff;
+  color: #ffca30;
   font-size: 30px;
   font-weight: 400;
   text-align: center;
@@ -352,7 +350,6 @@ button {
   color: #fff;
   font-size: 26px;
   font-weight: 700;
-  text-transform: uppercase;
   text-align: center;
 
   position: relative;
@@ -393,7 +390,7 @@ button {
   color: #fff;
   font-size: 26px;
   font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .info .block {
@@ -408,18 +405,16 @@ button {
   color: #ffb930;
   font-size: 26px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .info .block .add {
   color: #fff;
   font-size: 26px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .info button {
-  width: 365px;
+  width: 300px;
   height: 55px;
   display: flex;
   align-items: center;
@@ -431,7 +426,7 @@ button {
   color: #000;
   font-size: 20px;
   font-weight: 400;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   transition: all 0.5s ease;
   cursor: pointer;
 
@@ -449,6 +444,45 @@ button {
   /* text-transform: uppercase; */
 
   margin-top: 30px;
+}
+
+.moreText {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+
+  display: none;
+  opacity: 0;
+}
+
+.visibleBlockText {
+  display: block;
+  opacity: 1;
+
+  animation: fadeBlockText 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeBlockText {
+  from {
+    display: none;
+    opacity: 0;
+  }
+
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.info .desc .buttonMore {
+  color: #ffca30;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.info .desc .buttonMore:hover {
+  filter: brightness(75%);
 }
 
 /* Online */
@@ -499,7 +533,6 @@ button {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
-  text-transform: uppercase;
 
   margin-top: 70px;
 }
@@ -573,7 +606,7 @@ footer {
 
   .introInner .introTitle {
     font-size: 60px;
-    max-width: 750px;
+    max-width: 740px;
   }
 
   .memberInner .block {
@@ -758,6 +791,10 @@ footer {
   .info .name {
     font-size: 24px;
   }
+
+  .onlineDesc {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -782,7 +819,7 @@ footer {
 
   .memberInner .block .first .job,
   .memberInner .block .second .job {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .memberInner .block .first img,
@@ -829,7 +866,7 @@ footer {
 
   .info button {
     width: 295px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .footerInner {

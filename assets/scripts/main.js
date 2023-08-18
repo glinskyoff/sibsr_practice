@@ -21,4 +21,9 @@ $(document).ready(function () {
     $(".menuBlock").removeClass("active");
     $("body").removeClass("overflow");
   });
+
+  $(".buttonMore").click(function () {
+    $(this).parent().parent().find(".moreText").addClass("visibleBlockText");
+    $(this).css("display", "none");
+  });
 });
